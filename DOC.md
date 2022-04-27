@@ -13,6 +13,8 @@ export_on_save:
 
 # *Lexi Trees*: Probabilistic and Deterministic Self-Balancing Binary Search Trees <!-- omit in toc -->
 
+[Repository on GitHub](https://github.com/mtomassoli/lexi-trees)
+
 ## 1. In a nutshell
 
 * I'll introduce a new (to my knowledge) type of trees that I call *Lexi Trees*.
