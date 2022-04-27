@@ -916,7 +916,9 @@ Here's my intuition:
 * Remember, though, that the real test chooses the type of each operation at random, according to the cycle.
 * *Uniform*:
   * The *keys to insert* are (almost) *uniformly distributed* over a given interval.
-    * I said *"almost"* because I use *round* instead of *floor* to map the floats to ints.
+    * I said *"almost"* because:
+      * one can ask the *Uniform* key picker to only return integer keys, and ...
+      * ... I use *round* instead of *floor* to map the floats to ints.
   * The *keys to delete* are returned in random order.
   * Sometimes, the *key picker* returns (on purpose!) *keys to delete* that were never inserted.
 * The *FIFO* versions return the *keys to delete* in the same order as the *keys to insert*.
