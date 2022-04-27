@@ -1,4 +1,7 @@
 ---
+title: Lexi Trees
+author: Massimiliano Tomassoli
+
 html:
   embed_local_images: false
   embed_svg: false
@@ -13,7 +16,8 @@ export_on_save:
 
 # *Lexi Trees*: Probabilistic and Deterministic Self-Balancing Binary Search Trees <!-- omit in toc -->
 
-[Repository on GitHub](https://github.com/mtomassoli/lexi-trees)
+*Massimiliano Tomassoli, 2022*
+[*GitHub repository*](https://github.com/mtomassoli/lexi-trees)
 
 ## 1. In a nutshell
 
