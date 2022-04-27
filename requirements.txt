@@ -1,0 +1,13 @@
+cycler==0.11.0
+dill==0.3.4
+fonttools==4.32.0
+kiwisolver==1.4.2
+matplotlib==3.5.1
+networkx==2.8
+numpy==1.22.3
+packaging==21.3
+Pillow
+pyparsing==3.0.7
+python-dateutil==2.8.2
+six==1.16.0
+typing_extensions==4.1.1
