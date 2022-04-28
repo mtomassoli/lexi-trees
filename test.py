@@ -381,7 +381,7 @@ def main_test_progress(*, draw_only=False):
     num_ops = 10_000_000
     num_cycles = 2
     test_conf = TestConf('det3', 'uniform', num_ops, num_cycles,
-                         len_ratio_qs_every=False, show_image=True)
+                         len_ratio_qs_every=False, show_image=False)
     if not draw_only:
         do_test(test_conf)
     plural = 's' if num_cycles > 1 else ''
