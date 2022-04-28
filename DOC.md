@@ -260,7 +260,7 @@ Here's my intuition:
         * go all the way to the *right* to get to the *rightmost* leaf *key*&#8209;before the key node.
     * *Note*:
       * if we step *left* from the *key node*, then:
-        * all the nodes we visit from that point onward will have keys smaller than the searched-for key.
+        * all the nodes we visit from that point onward will have keys smaller than (or equal to, if the keys are not unique) the searched-for key.
 * Let's add *some* of the ignored nodes:
   <img src="images/search_path_with_sibs_24678893.svg" width="100%"/>
   <img src="images/search_path_with_sibs_33407660.svg" width="100%"/>
@@ -1113,13 +1113,13 @@ Here's my intuition:
 * The 2- and 3&#8209;Lexi Trees are somewhat influenced by the key pickers, but:
   * Most of the paths are *very* close to the *optimum*.
   * The other paths are still way below 2 times the optimum.
-  * This is very good, considering that 3&#8209;Lexi Trees give only a $3\log_2 N$ guarantee.
+  * This is very good, considering that 3&#8209;Lexi Trees give only a $3\log_2 (N+1)$ guarantee.
 * To do a complete analysis of 3&#8209;Lexi Trees, we should distinguish 2 kinds of paths:
   * *hot* paths: the *high* traffic paths
   * *cold* paths: the *low* traffic paths
 * This is especially true if searches are also able to *lift* nodes when they find triples. That would guarantee that:
-  * *hot* paths are of length $2\log_2 N$ at most
-  * *cold* paths are of length $3\log_2 N$ at most
+  * *hot* paths are of length $2\log_2 (N+1)$ at most
+  * *cold* paths are of length $3\log_2 (N+1)$ at most
 * Since *cold* paths are, by definition, *low* traffic, this would make 2- and 3&#8209;Lexi Trees virtually indistinguishable regarding the path lengths.
 * 3&#8209;Lexi Trees are heavier than 2&#8209;Lexi Trees algorithmically, though.
 * 2&#8209;Lexi Trees should always be preferred for the single-thread case.
