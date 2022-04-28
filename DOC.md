@@ -24,14 +24,28 @@ export_on_save:
 * I'll introduce a new (to my knowledge) type of trees that I call *Lexi Trees*.
 * They're easy to handle as they're little more than *binary trees*.
 * In particular, they're easy to *rebalance* and *keep balanced*.
+* There's a clear separation between concepts and implementation details:
+  * The algorithms are straightforward on a conceptual level.
+  * There's no "magic" involved in deriving the actual implementations.
 * They're very versatile as we can:
   * Make them *probabilistically* balanced by construction.
   * Rebalance them *deterministically* following two different approaches:
     * **clean after yourself**: We do the operation and then rebalance the tree.
     * **do not litter**: We prepare the tree for the operation, and then do the operation, all without breaking any invariants.
-* There's a clear separation between concepts and implementation details:
-  * The algorithms are straightforward on a conceptual level.
-  * There's no "magic" involved in deriving the actual implementations.
+* The *probabilistic* version:
+  * Has root$\to$leaf paths of length $\mathcal O(\log n)$ *on average*.
+  * It's easy to parallelize.
+* The *deterministic* versions:
+  *  have root$\to$leaf paths of length $\mathcal O(\log n)$ *in the worst case*.
+  * In particular, I present two versions:
+    * *2-Lexi Trees*
+      * They have root$\to$leaf paths of length at most $2\log_2(n+1)$.
+      * In practice, the path lengths are very close to the optimum and shorter than the ones of the probabilistic version.
+      * They're not so easy to parallelize because of the rebalancing (as expected).
+    * *3-Lexi Trees*
+      * They have root$\to$leaf paths of length at most $3\log_2(n+1)$.
+      * In practice, they have only slightly longer paths than 2-Lexi Trees.
+      * The advantage is that these should scale better than 2-Lexi Trees (this is *conjectural* at the moment).
 
 ## 2. Exposition
 
