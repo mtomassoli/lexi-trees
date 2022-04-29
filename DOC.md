@@ -645,8 +645,11 @@ Here's my intuition:
 
 #### 8.4.2. Low Level
 
-* It's a pity I don't have time to implement this :(
-* What follows is *conjectural*.
+* It's a pity I don't have time to implement this for now :(
+* Without a C/C++/Rust/... implementation, what follows is *conjectural*:
+  * Feel free to let me know what you think about it.
+  * Any contribution is more than welcome!
+    * (This applies to the whole project, by the way.)
 
 ##### 8.4.2.1. Versioning
 
